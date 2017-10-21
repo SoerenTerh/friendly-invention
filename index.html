@@ -1,34 +1,67 @@
 <!doctype html>
 <html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OMG</title>
+        <style>
+            html {
+                height: 100%;
+            }
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>OMG</title>
-  <link rel="icon" href="images/favicon.png">
+            body {
+                margin: 0;
+                background-color: #FCF0E4;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+            }
 
-  <style>
-    html {
-        height: 100%;
-    }
+            .entry {
+                background-image: url(http://cdn.onlinewebfonts.com/svg/img_189144.png);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                height: 250px;
+                width: 250px;
+            }
 
-    body {
-        margin: 0;
-        background-color: #FCF0E4;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-    }
-  </style>
-</head>
+            .pusheen {
+                display: none;
+            }
 
-<body>
-    <div>
-        <img src="./tumblr_mr77c8kQMv1stwx7xo1_400.gif" alt="pusheen!"/>
-		<iframe width="0" height="0" style="display:none;"  src="./meow.mp3"></iframe>
-    </div>
-</body>
+            .icon-cc {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                font-size: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="entry" id="entry-js"></div>
+        <div class="pusheen" >
+            <img src="./tumblr_mr77c8kQMv1stwx7xo1_400.gif" alt="pusheen!"/>
+            <audio id="meow-js" src="./meow.mp3"/>
+        </div>
 
+        <span class="icon-cc"><a href="https://www.flaticon.com/free-icon/help_565524">Icon</a> from www.flaticon.com</span>
+
+
+
+        <script>
+            var questionMark = document.querySelector('.entry');
+            var cc = document.querySelector('.icon-cc');
+            var pusheen = document.querySelector('.pusheen');
+            var audioMeow = document.querySelector('#meow-js');
+
+            questionMark.addEventListener('click', function(){
+                questionMark.style.display = "none";
+                cc.style.display = "none";
+                pusheen.style.display = "initial";
+                audioMeow.play();
+            });
+        </script>
+    </body>
 </html>
