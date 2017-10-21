@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OMG</title>
+  <link rel="icon" href="images/favicon.png">
+
+  <style>
+    html {
+        height: 100%;
+    }
+
+    body {
+        margin: 0;
+        background-color: #FCF0E4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+    <div>
+        <img src="http://24.media.tumblr.com/8a2b03f870903c4545d4fa47e8b12a4c/tumblr_mr77c8kQMv1stwx7xo1_400.gif" alt="pusheen!"/>
+        <audio id="meow-js" src="./meow.mp3" autoplay volume="0.5"/>
+    </div>
+
+    <script>
+        const audio = document.querySelector('#meow-js');
+        audio.volume = 0.3;
+    </script>
+</body>
+
+</html>
